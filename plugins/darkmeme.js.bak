@@ -1,0 +1,14 @@
+let fetch = require('node-fetch')
+let handler = async (m, { conn, args }) => {
+   response = args.join(' ')
+  m.reply('Sedang Diproses...')
+  let res = 'https://hardianto.xyz/api/darkmeme?apikey=hardianto'
+  conn.sendFile(m.chat, resl, 'lucu.jpg', `Dark ?`, m, false)
+}
+handler.help = ['darkmeme'].map(v => v + ' ')
+handler.tags = ['internet', 'fun', 'meme']
+
+handler.command = /^(darkmeme)$/i
+handler.register = true
+
+module.exports = handler
